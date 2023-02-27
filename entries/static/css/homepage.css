@@ -1,0 +1,19 @@
+body {
+background-color: #230;
+color:#CFCFCF;
+padding: 40px;
+font-family: Arial, sans-serif;
+}
+
+h1 {
+background-color: #DDD;
+color: #006;
+padding: 20px;
+font-family: "Georgia", sans-serif;
+}
+
+h2 {
+border-bottom: 2px solid #700;
+font-size: 1.2em;
+}
+

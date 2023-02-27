@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="{% static 'css/style.css' %}">
+   <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Poppins">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{% url 'base' %}">Главная</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Услуги</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/">Объявления</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="{% url 'contacts' %}">Контакты</a>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'registration' %}">Регистрация</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" href="{% url 'login' %}">Вход</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link" href="{% url 'logout' %}">Выход</a>
+          </li>
+          <p class="text-end">Привет, {{ user.username|default:"гость" }}!</p>
+      </ul>
+    </div>
+  </div>
+</nav>
+{% block body %}
+
+
+{% endblock %}
+
+
+   {% block content %}
+
+   {% endblock %}
+
+<footer>
+    <h8>+7 (351) 000-00-00 (Единый контакт-центр)<h8>
+    <p>info@uk-cosmos.ru<p/>
+
+  &copy; 2018 - 2023
+</footer>
+</body>
+
+</html>
